@@ -1,0 +1,20 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Notification {
+  id          String   @id @default(cuid())
+  channel     String
+  to          String
+  message     String
+  status      String   @default("PENDING")
+  idempotency String   @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  retries     Int      @default(0)
+}
