@@ -2,6 +2,7 @@
   "name": "distributed_notifications_gateway",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {

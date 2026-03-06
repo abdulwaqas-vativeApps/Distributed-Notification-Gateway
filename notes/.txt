@@ -70,7 +70,10 @@ vative-dng/
 │       └ tsconfig.json
 │
 │
+├ node_modules
 ├ package.json
 ├ turbo.json
 ├ tsconfig.json
+├ pnpm-workspace.yaml
+├ pnpm-lock.yaml
 └ .gitignore

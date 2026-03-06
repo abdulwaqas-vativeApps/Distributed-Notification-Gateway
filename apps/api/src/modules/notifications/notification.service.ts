@@ -13,6 +13,7 @@ export const createNotificationService = async (
   });
 
   if (existing) {
+    console.log("existing", existing)
     return existing;
   }
 

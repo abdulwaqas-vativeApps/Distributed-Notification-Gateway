@@ -7,6 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/v1/notifications", notificationRoutes);
+app.use("/api/v1/notifications", notificationRoutes);
 
 export default app;
