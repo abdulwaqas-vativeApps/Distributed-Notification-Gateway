@@ -2,13 +2,15 @@ import { prisma } from "@repo/database";
 import { sendEmail } from "./providers/email.provider";
 import { sendSms } from "./providers/sms.provider";
 
-const strategies = { email: sendEmail, sms: sendSms };
+console.log("Worker file loaded...");
+
+const strategies = { EMAIL: sendEmail, SMS: sendSms };
 const MAX_RETRIES = 3;
 const BASE_DELAY = 1000; // 1 sec
 
 const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
-type Channel = "email" | "sms";
+type Channel = "EMAIL" | "SMS";
 
 export const processNotification = async (notification: {
   id: string;

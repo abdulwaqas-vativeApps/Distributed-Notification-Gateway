@@ -20,8 +20,6 @@ vative-dng/
 │   │   │   └ server.ts
 │   │   │
 │   │   ├ package.json
- 
-│   │   └ .env
 │   │
 │   │
 │   └ worker/
