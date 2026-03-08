@@ -67,6 +67,12 @@ importers:
 
   apps/workers:
     dependencies:
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../../packages/database
+      '@repo/shared-schema':
+        specifier: workspace:*
+        version: link:../../packages/shared-schema
       '@sendgrid/mail':
         specifier: ^8.1.6
         version: 8.1.6

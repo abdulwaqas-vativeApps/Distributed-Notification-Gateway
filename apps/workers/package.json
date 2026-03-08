@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev src/scheduler.ts"
+    "dev": "ts-node-dev src/scheduler.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@repo/database": "workspace:*",
+    "@repo/shared-schema": "workspace:*",
     "@sendgrid/mail": "^8.1.6",
     "dotenv": "^17.3.1",
     "node-cron": "^4.2.1",
