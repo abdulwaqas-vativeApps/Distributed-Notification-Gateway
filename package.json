@@ -2,7 +2,6 @@
   "name": "distributed_notifications_gateway",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "packageManager": "pnpm@10.15.0",
   "description": "",
   "main": "index.js",
