@@ -65,11 +65,36 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  apps/client-a:
+    dependencies:
+      '@repo/notifications':
+        specifier: workspace:*
+        version: link:../../packages/notifications
+      dotenv:
+        specifier: ^17.3.1
+        version: 17.3.1
+      express:
+        specifier: ^5.2.1
+        version: 5.2.1
+    devDependencies:
+      '@types/express':
+        specifier: ^5.0.6
+        version: 5.0.6
+      '@types/node':
+        specifier: ^25.4.0
+        version: 25.4.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   apps/workers:
     dependencies:
       '@repo/database':
         specifier: workspace:*
         version: link:../../packages/database
+      '@repo/notifications':
+        specifier: workspace:*
+        version: link:../../packages/notifications
       '@repo/shared-schema':
         specifier: workspace:*
         version: link:../../packages/shared-schema
@@ -110,6 +135,28 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
+
+  packages/notifications:
+    dependencies:
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../database
+      '@repo/shared-schema':
+        specifier: workspace:*
+        version: link:../shared-schema
+      dotenv:
+        specifier: ^17.3.1
+        version: 17.3.1
+      express:
+        specifier: ^5.2.1
+        version: 5.2.1
+    devDependencies:
+      '@types/express':
+        specifier: ^5.0.6
+        version: 5.0.6
+      '@types/node':
+        specifier: ^25.3.5
+        version: 25.3.5
 
   packages/shared-schema:
     dependencies:
@@ -271,6 +318,9 @@ packages:
 
   '@types/node@25.3.5':
     resolution: {integrity: sha512-oX8xrhvpiyRCQkG1MFchB09f+cXftgIXb3a7UUa4Y3wpmZPw5tyZGTLWhlESOLq1Rq6oDlc8npVU2/9xiCuXMA==}
+
+  '@types/node@25.4.0':
+    resolution: {integrity: sha512-9wLpoeWuBlcbBpOY3XmzSTG3oscB6xjBEEtn+pYXTfhyXhIxC5FsBer2KTopBlvKEiW9l13po9fq+SJY/5lkhw==}
 
   '@types/qs@6.15.0':
     resolution: {integrity: sha512-JawvT8iBVWpzTrz3EGw9BTQFg3BQNmwERdKE22vlTxawwtbyUSlMppvZYKLZzB5zgACXdXxbD3m1bXaMqP/9ow==}
@@ -1394,11 +1444,11 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
 
   '@types/cors@2.8.19':
     dependencies:
@@ -1410,7 +1460,7 @@ snapshots:
 
   '@types/express-serve-static-core@5.1.1':
     dependencies:
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
       '@types/qs': 6.15.0
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
@@ -1429,18 +1479,22 @@ snapshots:
     dependencies:
       undici-types: 7.18.2
 
+  '@types/node@25.4.0':
+    dependencies:
+      undici-types: 7.18.2
+
   '@types/qs@6.15.0': {}
 
   '@types/range-parser@1.2.7': {}
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
 
   '@types/serve-static@2.2.0':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
 
   '@types/strip-bom@3.0.0': {}
 

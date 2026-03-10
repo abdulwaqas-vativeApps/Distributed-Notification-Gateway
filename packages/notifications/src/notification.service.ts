@@ -1,5 +1,5 @@
 import { prisma } from "@repo/database";
-import { CreateNotificationDTO } from "@repo/shared-schema/src/notification.types";
+import { CreateNotificationDTO } from "@repo/shared-schema";
 
 export const createNotificationService = async (
   data: CreateNotificationDTO,

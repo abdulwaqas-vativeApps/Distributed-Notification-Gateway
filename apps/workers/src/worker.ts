@@ -1,6 +1,5 @@
 import { prisma } from "@repo/database";
-import { sendEmail } from "./providers/email.provider";
-import { sendSms } from "./providers/sms.provider";
+import { sendEmail,sendSms } from "@repo/notifications";
 
 console.log("Worker file loaded...");
 

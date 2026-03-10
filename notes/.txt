@@ -1,77 +1,76 @@
-folder structure :
-
-vative-dng/
+vative-dng
 │
-├ apps/
+├ apps
 │   │
-│   ├ api/
+│   ├ client-a
 │   │   │
-│   │   ├ src/
-│   │   │   │
-│   │   │   ├ modules/
-│   │   │   │   │
-│   │   │   │   └ notifications/
-│   │   │   │       │
-│   │   │   │       ├ notification.routes.ts
-│   │   │   │       ├ notification.controller.ts
-│   │   │   │       └ notification.service.ts
-│   │   │   │
+│   │   ├ src
 │   │   │   ├ app.ts
-│   │   │   └ server.ts
+│   │   │   └ routes.ts
 │   │   │
 │   │   ├ package.json
+│   │   └ .env
 │   │
+│   ├ client-b
+│   │   │
+│   │   ├ src
+│   │   │   ├ app.ts
+│   │   │   └ routes.ts
+│   │   │
+│   │   ├ package.json
+│   │   └ .env
 │   │
-│   └ worker/
+│   └ worker
 │       │
-│       ├ src/
-│       │   │
-│       │   ├ providers/
-│       │   │   │
-│       │   │   ├ email.provider.ts
-│       │   │   └ sms.provider.ts
-│       │   │
+│       ├ src
 │       │   ├ worker.ts
 │       │   └ scheduler.ts
 │       │
-│       ├ package.json
- 
+│       └ package.json
 │
 │
-├ packages/
+├ packages
 │   │
-│   ├ database/
+│   ├ database
 │   │   │
-│   │   ├ prisma/
-│   │   │   │
+│   │   ├ prisma
 │   │   │   └ schema.prisma
 │   │   │
-│   │   ├ src/
-│   │   │   │
+│   │   ├ src
 │   │   │   └ client.ts
 │   │   │
-│   │   ├ .env
-│   │   ├ package.json
- 
+│   │   └ package.json
 │   │
 │   │
-│   └ shared-schema/
+│   ├ shared-schema
+│   │   │
+│   │   ├ src
+│   │   │   ├ enums.ts
+│   │   │   ├ notification.types.ts
+│   │   │   ├ notification.schema.ts
+│   │   │   └ index.ts
+│   │   │
+│   │   └ package.json
+│   │
+│   │
+│   └ notifications
 │       │
-│       │
-│       ├ src/
+│       ├ src
 │       │   │
-│       │   ├ notification.schema.ts
-│       │   ├ notification.types.ts
-│       │   └ enums.ts
+│       │   ├ notification.routes.ts
+│       │   ├ notification.controller.ts
+│       │   ├ notification.service.ts
+│       │   │
+│       │   ├ providers
+│       │   │   ├ email.provider.ts
+│       │   │   └ sms.provider.ts
+│       │   │
+│       │   └ index.ts
 │       │
-│       ├ package.json
-│       └ tsconfig.json
+│       └ package.json
 │
 │
-├ node_modules
-├ package.json
 ├ turbo.json
-├ tsconfig.json
+├ package.json
 ├ pnpm-workspace.yaml
-├ pnpm-lock.yaml
-└ .gitignore
+└ tsconfig.json
