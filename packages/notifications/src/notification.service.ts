@@ -6,7 +6,7 @@ export const createNotificationService = async (
   idempotencyKey: string
 ) => {
 
-  console.log("notification service");
+  console.log("notification service =========>");
 
   const existing = await prisma.notification.findUnique({
     where: {
@@ -33,6 +33,7 @@ export const createNotificationService = async (
 };
 
 export const getNotificationStatusService = async (id: string) => {
+  console.log("get notification status service  ===>", id);
   return prisma.notification.findUnique({
     where: { id }
   });

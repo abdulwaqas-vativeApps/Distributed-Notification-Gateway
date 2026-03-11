@@ -6,7 +6,6 @@ vative-dng
 │   │   │
 │   │   ├ src
 │   │   │   ├ app.ts
-│   │   │   └ routes.ts
 │   │   │
 │   │   ├ package.json
 │   │   └ .env
@@ -15,7 +14,6 @@ vative-dng
 │   │   │
 │   │   ├ src
 │   │   │   ├ app.ts
-│   │   │   └ routes.ts
 │   │   │
 │   │   ├ package.json
 │   │   └ .env

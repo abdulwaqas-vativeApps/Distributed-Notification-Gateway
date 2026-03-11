@@ -1,17 +1,20 @@
-import express from "express";
+import express,{ Application } from "express";
+import { Request, Response } from "express";
+
 import dotenv from "dotenv";
 dotenv.config(); 
 import {notificationRoutes} from "@repo/notifications";
-const app = express();
+const app: Application = express();
 
 // Middleware
-app.use(express.json()); // JSON body parse ke liye
+app.use(express.json());
+
 
 // Attach core routes
-app.use("/", notificationRoutes);
+app.use("/api/v1/notifications", notificationRoutes);
 
 // Health check endpoint
-app.get("/health", (req, res) => {
+app.get("/api/health", (req : Request, res : Response) => {
   res.status(200).json({ status: "ok" });
 });
 

@@ -7,6 +7,9 @@ const client = twilio(
   process.env.TWILIO_AUTH_TOKEN!
 );
 
+console.log("Twilio client initialized with SID:", process.env.TWILIO_SID); 
+console.log("Twilio client initialized with Auth Token:", process.env.TWILIO_AUTH_TOKEN); 
+
 export const sendSms = async (notification: {
   to: string;
   message: string;
