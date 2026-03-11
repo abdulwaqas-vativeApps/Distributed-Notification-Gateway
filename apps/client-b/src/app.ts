@@ -21,7 +21,7 @@ app.get("/api/health", (req : Request, res : Response) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
-const appName = process.env.APP_NAME || "Client A API";
+const appName = process.env.APP_NAME || "Client B API";
 app.listen(PORT, () => {
   console.log(`${appName} running on port ${PORT}`);
 });
