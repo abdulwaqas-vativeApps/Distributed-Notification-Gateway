@@ -72,3 +72,6 @@ vative-dng
 ├ package.json
 ├ pnpm-workspace.yaml
 └ tsconfig.json
+
+Update folder structure for Turbo Repo
+posgresql=root,mysql=root123
